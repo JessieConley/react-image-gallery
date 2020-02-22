@@ -33,7 +33,7 @@ class GalleryItem extends Component {
           {output}
         </button>
         <p>{this.props.counter}</p>
-        <button onClick={() => this.props.likes(this.props.image.id)}>Likes</button>
+        <button onClick={() => this.props.likes(this.props.id)}>Likes</button>
       </div>
     );
   }
