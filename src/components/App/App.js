@@ -8,7 +8,6 @@ import './App.css';
 class App extends Component {
   state = {
     galleryArray: []
-
   };
 
   componentDidMount = () => {
@@ -16,10 +15,25 @@ class App extends Component {
     this.getAllImages();
   };
 
-  putGalleryItems = () => {
-    console.log('hello from put');
-    axios.put('/gallery')
-  }
+  likes = (event) => {
+    console.log("Button clicked.", event.target.name);
+       axios.put(`gallery/like/${event.target.name}`)
+         .then(response => {
+
+           this.getAllImages(response.data);
+         })
+         .catch(error => {
+           alert(`Couldn't update like count. Try again later`);
+           console.log("Error updating inventory count", error);
+         });
+     };
+
+ 
+
+
+  
+
+ 
 
   getAllImages = () => {
     console.log("get all images");
@@ -46,8 +60,7 @@ class App extends Component {
         </header>
         <br />
         <p>Gallery goes here</p>
-        <GalleryList galleryArray = {this.state.galleryArray} />
-        
+        <GalleryList galleryArray={this.state.galleryArray} likes={this.likes} />
       </div>
     );
   }
