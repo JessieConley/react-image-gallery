@@ -4,7 +4,8 @@ import React, { Component } from 'react';
 
 class GalleryItem extends Component {
   state = {
-    isShowingText: false
+    isShowingText: false,
+    
   };
   handleClick = (event) => {
     if (this.state.isShowingText === false) {
@@ -13,6 +14,8 @@ class GalleryItem extends Component {
       this.setState({ isShowingText: false });
     }
   };
+
+  
 
   render() {
     // console.log(this.props.image);
@@ -26,11 +29,11 @@ class GalleryItem extends Component {
     
     return (
       <div className="GalleryItems">
-        {/* <img src={this.props.image.path} alt="" width="100"></img> */}
-        <button name={this.props.image.id} onClick={this.handleClick}>{output}
-          {/* Like */}
+        <button name={this.props.image.id} onClick={this.handleClick}>
+          {output}
         </button>
-        <button name={this.props.image.id} onClick={this.props.likes}>Likes</button>
+        <p>{this.props.counter}</p>
+        <button onClick={() => this.props.likes(this.props.image.id)}>Likes</button>
       </div>
     );
   }
