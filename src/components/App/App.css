@@ -16,12 +16,43 @@
 .App-intro {
   font-size: large;
 }
+/* .galleryList {
+  display: grid; */
+  /* grid-template-columns: repeat(3, 20px[col-start]); */
+  /* flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: wrap;
+  justify-content: center; */
+
+
+/* .GalleryList {
+  margin: 50px;
+} */
+
+/* .MuiCard-root {
+  margin-bottom: 20px;
+  margin-right: 20px;
+  width: 350px;
+  padding: 20px 0;
+  display: inline-block;
+}
+
+.PostBox {
+  height: 300px;
+  margin-bottom: 10px;
+  position: relative;
+} */
+
+/* img {
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  
+} */
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
-/* .gallery{
-  display: grid;
-} */
+

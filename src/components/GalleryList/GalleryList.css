@@ -1,0 +1,15 @@
+.galleryList{
+    
+    display: inline-grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px auto 200px; 
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    background-color: blueviolet;
+    width: fit-content;
+    height:fit-content;
+    padding: 20px;
+    place-content: stretch;
+    
+}
+

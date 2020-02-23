@@ -42,12 +42,14 @@ const galleryItems = [
     description: "Photo of Lou on Christmas 2019.",
     likes: 0
   },
+ 
   {
     id: 8,
     path: "images/regan_newportbeach.jpg",
     description: "Photo of Regan in the sand at NewportBeach.",
     likes: 0
-  }
+  },
+ 
 ];
 
 module.exports = galleryItems;

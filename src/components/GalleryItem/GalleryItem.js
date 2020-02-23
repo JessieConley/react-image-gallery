@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-// import GalleryList from "../GalleryItem/GalleryItem";
+
 
 class GalleryItem extends Component {
   state = {
@@ -32,8 +32,9 @@ class GalleryItem extends Component {
         <button name={this.props.image.id} onClick={this.handleClick}>
           {output}
         </button>
-        <p>{this.props.counter}</p>
-        <button onClick={() => this.props.likes(this.props.id)}>Likes</button>
+        <p>{this.props.image.likes}</p>
+        {/* closure - function that wraps another function */}
+        <button onClick={() => this.props.likes(this.props.image.id)}>Likes</button>
       </div>
     );
   }

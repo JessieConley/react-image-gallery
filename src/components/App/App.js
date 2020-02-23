@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import GalleryList from '../GalleryList/GalleryList';
 
-import './App.css';
+
 
 
 class App extends Component {
@@ -61,11 +63,12 @@ class App extends Component {
         </header>
         <br />
         <p>Gallery goes here</p>
-        <GalleryList
-          galleryArray={this.state.galleryArray}
-          likes={this.likes}
-         
-        />
+        <div className="container">
+          <GalleryList
+            galleryArray={this.state.galleryArray}
+            likes={this.likes}
+          />
+        </div>
       </div>
     );
   }
