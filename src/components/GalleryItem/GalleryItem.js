@@ -24,7 +24,7 @@ class GalleryItem extends Component {
     if (isShowingText) {
       output = <p>{this.props.image.description}</p>;
     } else {
-      output = <img src={this.props.image.path} alt="" width="100"></img>;
+      output = <img src={this.props.image.path} alt=""></img>;
     }
     
     return (

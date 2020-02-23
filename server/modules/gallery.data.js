@@ -1,7 +1,7 @@
 const galleryItems = [
   {
     id: 1,
-    path: "images/cabin_sunset.jpg",
+    path: "images/regan_me_summer_2019.jpg",
     description: "Photo of cabin lake at sunset.",
     likes: 0
   },

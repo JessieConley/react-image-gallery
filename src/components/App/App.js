@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import GalleryList from '../GalleryList/GalleryList';
 
 
@@ -17,13 +16,6 @@ class App extends Component {
     console.log("hello from start");
     this.getAllImages();
   };
-
-  // increaseCount = () => {
-  //   console.log(this.state.count);
-  //   this.setState({
-  //     count: this.state.count + 1
-  //   });
-  // };
 
   likes = (id) => {
     console.log("Button clicked.", id);
@@ -62,7 +54,7 @@ class App extends Component {
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br />
-        <p>Gallery goes here</p>
+    
         <div className="container">
           <GalleryList
             galleryArray={this.state.galleryArray}
