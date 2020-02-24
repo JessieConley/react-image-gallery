@@ -1,3 +1,4 @@
+//Set up imports
 import React, { Component } from 'react';
 import axios from 'axios';
 import "./App.css";
@@ -8,16 +9,17 @@ import GalleryList from '../GalleryList/GalleryList';
 
 class App extends Component {
   state = {
-    galleryArray: [],
-   
+    galleryArray: []
   };
 
+  //Page load function
   componentDidMount = () => {
     console.log("hello from start");
     this.getAllImages();
   };
 
-  likes = (id) => {
+  //When the like button is clicked, use `Axios` to update (`PUT`) the like count `/gallery/like/:id`.
+  likes = id => {
     console.log("Button clicked.", id);
     axios
       .put(`gallery/like/${id}`)
@@ -30,6 +32,7 @@ class App extends Component {
       });
   };
 
+  //Use `axios` to retrieve (`GET`) data from to `/gallery` and store it in `App.js`.
   getAllImages = () => {
     console.log("get all images");
     axios({
@@ -54,10 +57,13 @@ class App extends Component {
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br />
-    
+
         <div className="container">
+          {/* Set props and compile GalleryList */}
           <GalleryList
             galleryArray={this.state.galleryArray}
+
+            // Call on likes function with object key
             likes={this.likes}
           />
         </div>

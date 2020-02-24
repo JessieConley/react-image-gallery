@@ -1,3 +1,5 @@
+// Add images and assign ID and description to each
+
 const galleryItems = [
   {
     id: 1,

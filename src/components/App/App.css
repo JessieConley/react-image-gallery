@@ -18,14 +18,9 @@
 }
 
 
-
-
 img {
-  border-radius: 10px;
-  width: 150px;
-  
- 
-  
+  width: 150px; 
+  padding: 5px;
 }
 
 @keyframes App-logo-spin {

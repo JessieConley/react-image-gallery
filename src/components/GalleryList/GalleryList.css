@@ -1,5 +1,6 @@
+/* Styling a grid for the gallery list */
+
 .galleryList{
-    
     display: inline-grid;
     grid-template-columns: 200px 200px 200px 200px ;
     grid-template-rows: auto ; 
