@@ -1,7 +1,7 @@
 # Project Name
 
 React Gallery
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+
 
 ## Description
 
@@ -10,13 +10,13 @@ The React Gallery project consisted of creating an application that displays a g
 This application consisted of three components that were used to pass values through props using React:
 - App: Represents the overall application of the site
 - GalleryList: Represents the gallery of images
-- GalleryItem: Represents a single image within the gallery as well as the user interaction to view the image description or like an image
+- GalleryItem: Represents a single image within the gallery, as well as the user interaction to view the image description or like an image
 
 The images displayed on this application are being stored in an "images" folder within the project folder and the image data is being added manually within a separate data file located in the project folder as well. 
 
 ## Approach
 
-The approach I took to this project was to start with testing the GET and PUT server routes in Postman. Then, I selected images to use for this project, placed image files within the Images folder and entered the data for each image within the Gallery Data file. Following adding images, I ran my server code in the terminal and made sure I could get the server and client up and running. After this step, I set up my component files and functionality on the client side. Serve side functionality was set up prior to forking and cloning the project's repository.
+The approach I took to this project was to start with testing the GET and PUT server routes in Postman. Then, I selected images to use for this project, placed image files within the Images folder and entered the data for each image within the Gallery Data file. Following adding images, I ran my server code in the terminal and made sure I could get the server and client up and running. After this step, I set up my component files and functionality on the client side. Server side functionality was set up prior to forking and cloning the project's repository.
 
 Once all my functionality was set up, tested and working, I approached CSS styling, adding a separate stylesheet for my GalleryList component. This stylesheet holds the grid style of the images displayed on the site to allow the images to appear side-by-side with one another. 
 
