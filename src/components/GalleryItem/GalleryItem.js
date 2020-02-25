@@ -11,7 +11,7 @@ class GalleryItem extends Component {
   };
 
   //set up toggle click event using conditional to show image and image descrtiption upon click/event
-  handleClick = (event) => {
+  handleClick = () => {
     if (this.state.isShowingText === false) {
       this.setState({ isShowingText: true });
     } else {
@@ -33,13 +33,14 @@ class GalleryItem extends Component {
     
     return (
       <div className="GalleryItems">
-        {/* Swap image with the description on click of image */}
+        {/* Make image a button to toggle image with the description on click of image. Good practice because
+        it shows screenreader this is a button and clickable */}
         <button name={this.props.image.id} onClick={this.handleClick}>
           {output}
         </button>
 
         {/* Set up button for the Likes button client,
-        start by including anonymous function to fire off the function upon page load (closure funtion)
+        start by including anonymous function to prevent fire off the function upon page load in an infinite loop (closure funtion)
         call on "likes" function from App.js file and pass in the image id
         */}
         <button onClick={() => this.props.likes(this.props.image.id)}>Likes</button>

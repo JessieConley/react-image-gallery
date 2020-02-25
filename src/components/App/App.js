@@ -1,5 +1,10 @@
 //Set up imports
 import React, { Component } from 'react';
+import { HashRouter as Router, Route, Link } from "react-router-dom";
+
+import Home from "../Home/Home.js";
+import About from "../About/About.js";
+
 import axios from 'axios';
 import "./App.css";
 import GalleryList from '../GalleryList/GalleryList';
@@ -19,7 +24,7 @@ class App extends Component {
   };
 
   //When the like button is clicked, use `Axios` to update (`PUT`) the like count `/gallery/like/:id`.
-  likes = id => {
+  updateLikes = id => {
     console.log("Button clicked.", id);
     axios
       .put(`gallery/like/${id}`)
@@ -42,6 +47,7 @@ class App extends Component {
       .then(response => {
         console.log(response.data);
         this.setState({
+          //response is gallery array:
           galleryArray: response.data
         });
       })
@@ -49,25 +55,42 @@ class App extends Component {
         console.log(err);
       });
   };
+  
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Gallery of my life</h1>
-        </header>
-        <br />
-
-        <div className="container">
-          {/* Set props and compile GalleryList */}
-          <GalleryList
-            galleryArray={this.state.galleryArray}
-
-            // Call on likes function with object key
-            likes={this.likes}
-          />
+      <Router>
+        <div className="AppHeader">
+          <ul>
+            
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+           
+          </ul>
         </div>
-      </div>
+
+        <div className="App">
+          <header className="App-header">
+            <h1 className="App-title">Gallery of my life</h1>
+          </header>
+          <br />
+
+          <div className="container">
+            {/* Set props and compile GalleryList */}
+            <GalleryList
+              galleryArray={this.state.galleryArray}
+              // Call on likes function with object key
+              likes={this.updateLikes}
+            />
+          </div>
+        </div>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+      </Router>
     );
   }
 }

@@ -17,6 +17,32 @@
   font-size: large;
 }
 
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: violet;
+}
+
+li{
+  display: inline;
+  padding: 15px;
+  list-style-type: none;
+  float: left;
+  
+}
+
+li a{
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+li a:hover {
+  background-color: gray;
+}
 
 img {
   width: 150px; 

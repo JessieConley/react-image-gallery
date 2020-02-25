@@ -10,12 +10,12 @@ class GalleryList extends Component {
     return (
       <div className="galleryList">
        {/* Loop through array */}
-            {this.props.galleryArray.map(image => (
-
-              //Generate gallery item component and display items information
-              <GalleryItem
-                image={image}
-                key={image.id}
+            {this.props.galleryArray.map(taco => (
+              //Generate gallery item component and display items information on the Dom
+              <GalleryItem  
+              //pass whole obejct in with image={image}
+              image={taco}  
+              key={taco.id}
                 
                 //"likes" is your object key and this.props.likes is passing the likes function in from App.js
                 likes={this.props.likes}
